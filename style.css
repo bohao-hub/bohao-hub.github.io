@@ -1,0 +1,143 @@
+:root {
+  --background: #fbf8f1;
+  --paper: #fffdf8;
+  --text: #1b1218;
+  --muted: #6f6266;
+  --line: #dacbb3;
+  --accent: #8d2719;
+  --link: #173f6f;
+  --max-width: 1160px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Noto Sans SC", sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+a {
+  color: var(--link);
+  text-underline-offset: 3px;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  background: rgba(251, 248, 241, 0.94);
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid var(--text);
+}
+
+nav {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 12px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  color: var(--text);
+  font-size: 18px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+main {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 32px 28px 48px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 28px;
+  padding-bottom: 24px;
+  border-bottom: 2px solid var(--text);
+}
+
+h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.role,
+.muted {
+  color: var(--muted);
+}
+
+.contact-card {
+  padding: 16px;
+  background: var(--paper);
+  border: 1px solid #bda98b;
+  border-radius: 6px;
+  box-shadow: 4px 4px 0 rgba(189, 169, 139, 0.28);
+}
+
+.links,
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.links a,
+.tags a,
+.tags span {
+  padding: 3px 8px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.content-section {
+  display: grid;
+  grid-template-columns: 250px minmax(0, 1fr);
+  gap: 28px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.publication h3 {
+  margin-bottom: 4px;
+}
+
+.venue {
+  color: var(--accent);
+}
+
+footer {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 0 28px 30px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+@media (max-width: 860px) {
+  .hero,
+  .content-section {
+    grid-template-columns: 1fr;
+  }
+
+  nav,
+  main {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
